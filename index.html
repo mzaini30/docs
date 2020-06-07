@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Docs</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="vendor/bootstrap.min.css">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<div class="vue">
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<router-link class="navbar-brand" to="/">Docs</router-link>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<router-view></router-view>
+		</div>
+	</div>
+	<!-- template -->
+	<template id="beranda">
+		<div>
+			<div class="marked">
+# Hello world!
+
+<router-link to="/hello">Menuju ke hello...</router-link>
+			</div>
+		</div>
+	</template>
+	<!-- template -->
+	<template id="hello">
+		<div>
+			<div class="marked">
+# Ini adalah hello
+
+<router-link to="/">Kembali ke beranda...</router-link>
+			</div>
+		</div>
+	</template>
+	<!-- template -->
+	<script src="vendor/jquery.min.js"></script>
+	<script src="vendor/vue.min.js"></script>
+	<script src="vendor/vue-router.min.js"></script>
+	<script src="vendor/marked.min.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
